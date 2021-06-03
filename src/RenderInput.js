@@ -3,7 +3,9 @@ import React from "react";
 const RenderInput = ({ outputConsole }) => {
   const [input, setInput] = React.useState("");
   const outputValue = () => {
+    // なんらかの入力があった場合
     if (input) {
+      // 関数を実行する
       outputConsole(input);
     }
   };

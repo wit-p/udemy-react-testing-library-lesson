@@ -15,6 +15,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
+        {/* propsでoutputConsole関数を受け取り、output関数を実行する */}
         <RenderInput outputConsole={output} />
         <p>
           Edit <code>src/App.js</code> and save to reload.
