@@ -3,8 +3,25 @@ import logo from "./logo.svg";
 import { Counter } from "./features/counter/Counter";
 import "./App.css";
 import RenderInput from "./RenderInput";
+import FrameworkList from "./FrameworkList";
 
 function App() {
+  // ダミーデータ FrameworkList
+  const data = [
+    {
+      id: 1,
+      item: "React",
+    },
+    {
+      id: 2,
+      item: "Angular",
+    },
+    {
+      id: 3,
+      item: "Vue",
+    },
+  ];
+
   /*追加 output関数*/
   const output = (text) => {
     console.log(text);
@@ -17,6 +34,7 @@ function App() {
         <Counter />
         {/* propsでoutputConsole関数を受け取り、output関数を実行する */}
         <RenderInput outputConsole={output} />
+        <FrameworkList frameworks={data} />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
